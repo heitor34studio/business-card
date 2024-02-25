@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Sobre Mim</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="scripts/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/2144aa5a49.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <canvas id='canv'></canvas>
+    <header class="header">
+        <nav class="headerMenu">
+            <a class="headerMenuBtn Btn" id="home" href=".">Início</a>
+            <a class="headerMenuBtn Btn" id="about" href="about.html">Sobre Mim</a>
+        </nav>
+        <div class="headerDiv">
+            <button type="button" class="headerFlags" id="flagButton" onclick="controlarDropdown()">
+                <img src="assets/flag-br.png" id="first" alt="Bandeira Brasil Idioma">
+                <i class="fa-solid fa-arrow-down headerFlagsArrow" style="opacity: 75%;"></i>
+            </button>
+            <ul class="headerFlagsDropdown">
+                <li>
+                    <img src="assets/flag-us.png" class="flagOption" id="second" alt="Bandeira Estados Unidos Idioma">
+                </li>
+                <li>
+                    <img src="assets/flag-jp.png" class="flagOption" id="third" alt="Bandeira Japão Idioma">
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main class="container">
+        <section class="containerSection">
+            <h1 id="containerSectionH1">Sobre <strong class="destaque"> Mim! </strong></h1>
+            <p id="containerSectionP">
+                Olá, me chamo Heitor Dutra Bento. Tenho 18 anos e sou <span class="destaque">Dev Full-Stack</span>. Atualmente estudo Análise e Desenvolvimento de Sistemas na Modalidade EAD na Universidade da Estácio. Sou fluente em <span class="destaque">Português e Inglês e Intermediário em Japonês</span>.
+                Minha jornada nessa área começa quando fiz o Curso completo de Desenvolvimento Web 2018 durante a quarentena em 2020.
+                Em 2021 conheci o WordPress e comecei a praticar a criação de sites nele. <a href="#" class="destaque">Clique aqui</a> para ver mais detalhes dos seguintes projetos:
+                </br><span class="destaque">Meu 1° PROJETO</span> foi um site institucional para o negócio da minha mãe.
+                Ainda em 2021 recebi uma mesa digitalizadora, que usei para fazer alguns designs para os próximos projetos e para desenhar mesmo.
+                </br><span class="destaque">Meu 2° PROJETO</span> foi meu portfólio de projetos.
+                </br><span class="destaque">Meu 3° PROJETO</span> agora voltando para sites programados não WordPress, foi o ThonThon. Uma adaptação do projeto básico "Twitter Clone" do curso de 2020, porém com muitas funcionalidades a mais.
+                </br><span class="destaque">Meu 4° PROJETO</span> foi o VavaLineups, ele focava em mostrar jogadas para se fazer com a personagem Viper do jogo Valorant. Nele quis implementar formas de pagamento para a criação de uma conta VIP na plataforma.
+                </br><span class="destaque">Meu 5° PROJETO</span> foi o BitPrice, uma plataforma que checa os atuais preços das criptomoedas em API's de diversas corretoras.
+                </br><span class="destaque">Meu 6° PROJETO</span> foi o Renthon Pizzaiolo, um sistema completo de Pizzaria em React, simulando a criação dos produtos, os pedidos na cozinha, e o aplicativo do garçom no celular.
+                </br><span class="destaque">Meu 7° PROJETO</span> foi esse Cartão de Visitas, portfolio que fiz com os cursos da Alura, fornecidos pelo Programa ONE - Oracle Next Education.
+            </p>
+        </section>
+        <img class="containerImg" src="assets/profile-pic.png" alt="Foto-do-Heitor">
+    </main>
+    <footer class="footer">
+        <p id="footerP">Desenvolvido por Heitor D. B. (Renthon)- 34studio.</p>
+    </footer>
+
+    <script>
+            
+        function jp() {
+
+            //traduz os conteúdos para japonês
+
+            $('#title').html('私について');
+            $('#home').html('ホーム');
+            $('#about').html('私について');
+            $('#containerSectionH1').html('<strong class="destaque">私</strong>について！');
+            $('#containerSectionP').html(`こんにちは、私の名前はエイトル・ドゥトラ・ベントです。 私は 18 歳で、<span class="destaque">フルスタック開発者</span>です 。 私は現在、エスタシオ大学で遠隔教育におけるシステム分析と開発を学んでいます。<span class="destaque"> ポルトガル語と英語にペラペラで、日本語は中級です。</span>.
+            この分野での私の旅は、2020 年の隔離期間中に 2018 年の Web 開発ク授業を完全に受講したときに始まりました。
+                2021 年に WordPress を発見し、WordPress で Web サイトを作成する練習を始めました。以下のプロジェクトの詳細を確認するには、<a href="#" class="destaque">ここをクリックしてください。</a>
+                </br><span class="destaque">私の最初のプロジェクト</span>は、母のビジネスのための機関ウェブサイトでした。 
+                2021 年になっても、グラフィック タブレットを受け取り、次のプロジェクトのデザインを作成したり、実際に絵を描いたりするために使用しました。
+                </br><span class="destaque">私の２つ目プロジェクト</span>は私のプロジェクトポートフォリオでした。
+                </br><span class="destaque">私の３つ目プロジェクト</span> は、WordPress 以外でプログラムされた Web サイトに戻りましたが、ThonThon でした。 2020 コースの基本的な「Twitter クローン」プロジェクトを応用したものですが、さらに多くの機能が追加されています。
+                </br><span class="destaque">私の４つ目プロジェクト</span> は VavaLineups で、ゲーム Valorant のキャラクター Viper の動きを示すことに焦点を当てていました。その中で、プラットフォーム上に VIP アカウントを作成するための支払い方法を実装したいと考えました。
+                </br><span class="destaque">私の５つ目プロジェクト</span> は、さまざまなブローカーの API で仮想通貨の現在の価格をチェックするプラットフォームである BitPrice でした。
+                </br><span class="destaque">私の６つ目プロジェクト</span>は、React で作られた完全なピッツェリア システムである Renthon Pizzaiolo で、製品の作成、キッチンでの注文、携帯電話でのウェイターのアプリケーションをシミュレートしました。
+                </br><span class="destaque">私の７つ目プロジェクト</span>は、このビジネスカードで、ONEプログラムであるOracle Next Educationが提供するAluraの学校で作成したポートフォリオです。`);
+            $('#footerP').html('Heitor D.B. (Renthon) - 34studio によって開発されました。');
+
+        }
+
+        function us() {
+
+            //traduz os conteúdos para inglês
+
+            $('#title').html('About Me');
+            $('#home').html('Home');
+            $('#about').html('About Me');
+            $('#containerSectionH1').html('About <strong class="destaque">Me!</strong>');
+            $('#containerSectionP').html(`Hey! I'm Heitor Dutra Bento. I'm a 18 years old <span class="destaque">Full-Stack Developer</span>. Currently studying Systems Analysis and Development in EAD Modality at the University of Estácio. I'm fluent in <span class="destaque">Portuguese and English, and intermediate in Japanese</span>.
+                My journey on this area begins when I completed the Full Web Development Course 2018 at Udemy during the quarantine back in 2020.
+                In 2021 I got to know WordPress and I started practicing creating websites in it. <a href="#" class="destaque">Click here</a> to check more detailes 'bout these projects:
+                </br><span class="destaque">My 1° PROJECT</span> was an intistucional website for my mom's business.
+                Also in 2021 I received a graphics tablet, that would help me to make some designs to my future projects and to draw too.
+                </br><span class="destaque">My 2° PROJECT</span> was my project's portfolio.
+                </br><span class="destaque">MY 3° PROJECT</span> coming back to programmed websites with no WordPress, was ThonThon. An adaptation from the basic project "Twitter Clone" from the 2020 course, but with a lot more functionalities.
+                </br><span class="destaque">My 4° PROJECT</span> was VavaLineups, and it focused on showing plays and lineups that you can make with Viper in the game of Valorant. In this project I wanted to implement payment methods for creating a VIP account in the platform.
+                </br><span class="destaque">My 5° PROJECT</span> was BitPrice, a platform that checks the current prices of cryptocurrencies on APIs's from various brokers.
+                </br><span class="destaque">My 6° PROJECT</span> was Renthon Pizzaiolo, a complete Pizzaria system made with React, simulating the creation of the products, the kitchen's orders, and the waiter app on his cell phone.
+                </br><span class="destaque">My 7° PROJECT</span> was this Visit Card, a portfolio I made with the Alura courses, provided by the ONE Program - Oracle Next Education.`);
+            $('#footerP').html('Developed by Heitor D. B. (Renthon)- 34studio.');
+
+        }
+
+        $('.flagOption').click(function(){
+
+            //alterando a bandeira principal para a bandeira clicada
+
+            var bandeiraAtual = $('#first').attr('src');
+            var bandeiraDoBotaoClicado = $(this).attr('src');
+            $('#first').attr('src', bandeiraDoBotaoClicado);
+            $(this).attr('src', bandeiraAtual);
+
+            switch (bandeiraDoBotaoClicado) {
+
+                case "assets/flag-us.png":
+                    return criarCookieIdioma('us');
+                    break;
+                case "assets/flag-jp.png":
+                    return criarCookieIdioma('jp');
+                    break;
+                case "assets/flag-br.png":
+                    return criarCookieIdioma('br');
+                    break;
+                default:
+                    console.log("País não reconhecido");
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html> 

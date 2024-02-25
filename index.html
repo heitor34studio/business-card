@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Heitor D.B.</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="scripts/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/2144aa5a49.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <canvas id='canv'></canvas>
+    <header class="header">
+        <nav class="headerMenu">
+            <a class="headerMenuBtn Btn" id="home" href=".">Início</a>
+            <a class="headerMenuBtn Btn" id="about" href="about.html">Sobre Mim</a>
+        </nav>
+        <div class="headerDiv">
+            <button type="button" class="headerFlags" id="flagButton" onclick="controlarDropdown()">
+                <img src="assets/flag-br.png" id="first" alt="Bandeira Brasil Idioma">
+                <i class="fa-solid fa-arrow-down headerFlagsArrow" style="opacity: 75%;"></i>
+            </button>
+            <ul class="headerFlagsDropdown">
+                <li>
+                    <img src="assets/flag-us.png" class="flagOption" id="second" alt="Bandeira Estados Unidos Idioma">
+                </li>
+                <li>
+                    <img src="assets/flag-jp.png" class="flagOption" id="third" alt="Bandeira Japão Idioma">
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main class="container">
+        <section class="containerSection">
+            <h1 id="containerSectionH1">Eleve seu negócio digital a outro nível <strong class="destaque"> com um Dev Full-Stack de qualidade! </strong></h1>
+            <p id="containerSectionP">Olá! Sou Heitor Dutra Bento, Dev Full-Stack com especialidade em <span class="destaque"> Modelagem de Sistemas em UML, React, TypeScript, NodeJS, NextJS, React-Native, JavaScript, CSS3, HTML5, PHP, MYSQL, POSTGRESQL, JQuery e Figma </span>. Ajudo pequenos negócios e designers a colocarem em prática boas ideias. Vamos conversar?</p>
+            <div class="containerSectionButtons">
+                <h2 id="containerSectionButtonsh2">Acesse minhas redes:</h2>
+                <a class="containerSectionButtonsIcons Btn github" href="https://github.com/heitor34studio">GitGub</a>
+                <a class="containerSectionButtonsIcons Btn instagram" href="https://www.instagram.com/heitor34studio/">Instagram</a>
+                <a class="containerSectionButtonsIcons Btn linkedin" href="https://www.linkedin.com/in/heitor-dutra34/">LinkedIn</a>
+            </div>
+        </section>
+        <img class="containerImg" src="assets/profile-pic.png" alt="Foto-do-Heitor">
+    </main>
+    <footer class="footer">
+        <p id="footerP">Desenvolvido por Heitor D. B. (Renthon)- 34studio.</p>
+    </footer>
+
+    <script>
+            
+        function jp() {
+
+            //traduz os conteúdos para japonês
+
+            $('#home').html('ホーム');
+            $('#about').html('私について');
+            $('#containerSectionH1').html(' あなたのデジタルビジネスを<strong class="destaque">プロのフルスタック開発者</strong>と一緒に別のレベルに引き上げましょう。');
+            $('#containerSectionP').html("よっす！ 私は Heitor Dutra Bento です。<span class='destaque'>UMLでのシステム モデリング, React、TypeScript、NodeJS、NextJS、React-Native、JavaScript、CSS3、HTML5、PHP、MYSQL、POSTGRESQL、JQuery、Figma</span> を専門とするフルスタック開発者です。私は中小企業やデザイナーが良いアイデアを実践できるよう支援しています。連絡されてね！");
+            $('#containerSectionButtonsh2').html('私のリンク：');
+            $('#footerP').html('Heitor D.B. (Renthon) - 34studio によって開発されました。');
+            $('.github').html('ギットハブ');
+            $('.instagram').html('インスタグラム');
+            $('.linkedin').html('リンケディン');
+
+        }
+
+        function us() {
+
+            //traduz os conteúdos para inglês
+
+            $('#home').html('Home');
+            $('#about').html('About Me');
+            $('#containerSectionH1').html('Take your digital business to another level with a <strong class="destaque"> professional Full-Stack Dev! </strong>');
+            $('#containerSectionP').html("Hey! I'm Heitor Dutra Bento, a Full-Stack Developer specializing in <span class='destaque'>Systems Modeling in UML, React, TypeScript, NodeJS, NextJS, React-Native, JavaScript, CSS3, HTML5, PHP, MYSQL, POSTGRESQL, JQuery and Figma </span>. I help small businesses and designers to put good ideas into practice. Hit me Up!");
+            $('#containerSectionButtonsh2').html('My Socials:');
+            $('#footerP').html('Developed by Heitor D. B. (Renthon)- 34studio.');
+
+        }
+
+        $('.flagOption').click(function(){
+
+            //alterando a bandeira principal para a bandeira clicada
+
+            var bandeiraAtual = $('#first').attr('src');
+            var bandeiraDoBotaoClicado = $(this).attr('src');
+            $('#first').attr('src', bandeiraDoBotaoClicado);
+            $(this).attr('src', bandeiraAtual);
+
+            switch (bandeiraDoBotaoClicado) {
+
+                case "assets/flag-us.png":
+                    return criarCookieIdioma('us');
+                    break;
+                case "assets/flag-jp.png":
+                    return criarCookieIdioma('jp');
+                    break;
+                case "assets/flag-br.png":
+                    return criarCookieIdioma('br');
+                    break;
+                default:
+                    console.log("País não reconhecido");
+            }
+
+        });
+
+    </script>
+</body>
+</html> 

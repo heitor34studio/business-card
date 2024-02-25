@@ -1,0 +1,227 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+}
+
+:root {
+  /*main colors*/
+	--primary: #f7aa24;
+    --secondary: rgb(000, 000, 000, 70%);
+    --blackFade: rgb(0,0,0,0.3);
+    --space: 2% 15% 0% 15%;
+}
+
+#canv {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-family: monospace;
+    gap: 20px;
+}
+
+.header{
+    z-index: 2;
+    background: radial-gradient(ellipse at bottom, var(--blackFade) 65%, var(--primary));
+    padding: var(--space);
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerMenu{
+    max-width: 30%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.headerMenuBtn{
+    background-color: var(--secondary);
+}
+
+.headerDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerFlags{
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.headerFlagsDropdown{
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+    list-style-type: none;
+    margin-top: -160px;
+}
+
+.headerFlagsDropdown img, .headerFlags img{
+    width: 30px;
+    cursor: pointer;
+}
+
+.headerFlagsArrow{
+    transition: all 0.5s ease;
+}
+
+.container {
+    background-color: var(--secondary);
+    padding: 3rem;
+    margin:  var(--space);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    max-width: 70%;
+    border: 2px solid var(--primary);
+}
+
+h1{
+    font-size: 1.9rem;
+}
+
+h2{
+    font-size: 1.25rem;
+}
+
+p{
+    font-size: 1.1rem;
+}
+  
+.destaque{
+    color: var(--primary);
+    border-bottom: 1px solid var(--primary);
+}
+
+.containerSection{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.containerImg{
+    width: 40%;
+    height: auto;
+    border-radius: 20px 0 20px 0;
+    border: 2px solid var(--primary);
+}
+
+.containerSectionButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.Btn{
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-size: 1.25rem;
+    transition: 0.3s linear;
+    text-align: center;
+    font-weight: 600;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.Btn:hover{
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+.containerSectionButtonsIcons::before{
+    display: inline-block;
+}
+
+.github:hover::before{
+    content: url('../assets/github-black.png');
+}
+
+.github::before{
+    content: url('../assets/github.png');
+}
+
+.instagram:hover::before{
+    content: url('../assets/instagram-black.png');
+}
+
+.instagram::before{
+    content: url('../assets/instagram.png');
+}
+
+.linkedin:hover::before{
+    content: url('../assets/linkedin-black.png');
+}
+
+.linkedin::before{
+    content: url('../assets/linkedin.png');
+}
+
+.footer{
+    z-index: 1;
+    background: radial-gradient(ellipse at top, var(--blackFade) 65%, var(--primary));
+    text-align: center;
+    padding: 24px;
+}
+
+@media screen and (max-width: 750px) {
+    .header{
+        gap: 10px;
+    }
+    .headerMenu{
+        max-width: 7cm;
+        gap: 5px;
+    }
+    .container {
+        flex-direction: column-reverse;
+        padding: 1rem;
+    }
+    h1{
+        font-size: 1.25rem;
+    }
+    h2{
+        font-size: 0.9rem;
+    }
+    p{
+        font-size: 0.75rem;
+    }
+    .containerSection{
+        width: 100%;
+    }
+    .containerImg{
+        width: 80%;
+    }
+    .Btn{
+        font-size: 0.85rem;
+    }
+}
