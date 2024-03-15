@@ -20,5 +20,5 @@ O projeto Business Card, é um site institucional que, pelas suas 2 páginas, ap
 
 ## 📁 Acesso ao projeto
 
-[Veja o projeto final em funcionamento.](https://heitor34studio.github.io)
+[Veja o projeto final em funcionamento.](https://business-card-amber.vercel.app)
 Neste repositório você tem acesso a todo o material da ferramenta.
