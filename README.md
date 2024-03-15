@@ -2,7 +2,7 @@
 # Business Card Projeto Alura
 ![Static Badge](https://img.shields.io/badge/HTML5-orange)![Static Badge](https://img.shields.io/badge/CSS3-blue)![Static Badge](https://img.shields.io/badge/JS-yellow)
 
-O projeto Business Card, é uma site institucional que, pelas suas 2 páginas, apresenta minhas informações básicas, áreas da tecnologia que tenho experiência em atuar, e lista meus projetos que já programei/participei.
+O projeto Business Card, é um site institucional que, pelas suas 2 páginas, apresenta minhas informações básicas, áreas da tecnologia que tenho experiência em atuar, e lista meus projetos que já programei/participei.
 
 ## Índice
 
