@@ -10,6 +10,12 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="scripts/scripts.js"></script>
     <script src="https://kit.fontawesome.com/2144aa5a49.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            document.getElementById('idade').textContent =  Math.abs(new Date(Date.now() - new Date('2005-04-14').getTime()).getUTCFullYear() - 1970);
+        });
+        
+    </script>
 </head>
 <body>
     <canvas id='canv'></canvas>
@@ -36,11 +42,20 @@
     <main class="container">
         <section class="containerSection">
             <h1 id="containerSectionH1">Sobre <strong class="destaque"> Mim! </strong></h1>
-            <p id="containerSectionP">
-                Olá, me chamo Heitor Dutra Bento. Tenho 18 anos e sou <span class="destaque">Dev Full-Stack</span>. Atualmente estudo Análise e Desenvolvimento de Sistemas na Modalidade EAD na Universidade da Estácio. Sou fluente em <span class="destaque">Português e Inglês e Intermediário em Japonês</span>.
-                Minha jornada nessa área começa quando fiz o Curso completo de Desenvolvimento Web 2018 durante a quarentena em 2020.
-                Em 2021 conheci o WordPress e comecei a praticar a criação de sites nele. <a href="#" class="destaque">Clique aqui</a> para ver mais detalhes dos seguintes projetos:
-                </br><span class="destaque">Meu 1° PROJETO</span> foi um site institucional para o negócio da minha mãe.
+            <div id="containerSectionP" style="display: flex; flex-direction: column; gap: 10px;">
+                <p>
+                    Olá, me chamo Heitor Dutra Bento. Tenho <span id="idade"></span> anos e sou <span class="destaque">Dev Full-Stack</span>. Atualmente estudo Análise e Desenvolvimento de Sistemas na Modalidade EAD na Universidade da Estácio. Sou fluente em <span class="destaque">Português e Inglês e Intermediário em Japonês</span>. A seguir segue um resumo de meus estudos, mas se quiser ver tudo que já aprendi em detalhes, <a href="https://heitordutra.site/portfolio/#certificados" class="destaque">clique aqui</a>!
+                </p>
+                <p>
+                    Minha jornada nessa área começa quando fiz o <a href="https://www.udemy.com/certificate/UC-e5fc21ac-3784-4917-92fa-165d0777eae5/" class="destaque">Curso completo de Desenvolvimento Web 2018</a> durante a quarentena em 2020, onde aprendi sobre: HTML5, JavaScript, CSS3, PHP, MYSQL e JQuery. Em 2021 conheci o WordPress e comecei a praticar a criação de sites nele. Em 2022 foquei em fazer alguns projetos com Wordpress e programados com o que aprendi no curso previamente citado. Em 2023 comecei a cursar <span class="destaque">Engenharia de Software na Estácio, mas troquei o curso para ADS</span> no 2° semestre. No final de 2023, também fiz o curso <a href="https://www.udemy.com/certificate/UC-f5ca3be6-38f9-479d-a248-279e4223003f/" class="destaque">"Projeto Completo NodeJS, React, React Native, TypeScript"</a> na Udemy. No 1° semestre de 2024, continuando o curso de ADS, aprendi sobre: Computação em Nuvem, Comunicação entre Aplicações, Engenharia de Software, Modelagem de Sistemas em UML, etc... E em março participei do programa <a href="https://cursos.alura.com.br/user/heitordutra" class="destaque">"Programa ONE - Oracle Next Education"</a>, fornecido pela Alura e Oracle. 
+                </p>
+                <p>
+                    <a href="https://heitordutra.site/portfolio/#certificados" class="destaque">Clique aqui</a> para ver mais detalhes de todos projetos que fiz, e todas certificações que obti, desde 2020 até hoje!
+                </p>
+
+                <!--
+
+                <span class="destaque">Meu 1° PROJETO</span> foi um site institucional para o negócio da minha mãe.
                 Ainda em 2021 recebi uma mesa digitalizadora, que usei para fazer alguns designs para os próximos projetos e para desenhar mesmo.
                 </br><span class="destaque">Meu 2° PROJETO</span> foi meu portfólio de projetos.
                 </br><span class="destaque">Meu 3° PROJETO</span> agora voltando para sites programados não WordPress, foi o ThonThon. Uma adaptação do projeto básico "Twitter Clone" do curso de 2020, porém com muitas funcionalidades a mais.
@@ -48,7 +63,9 @@
                 </br><span class="destaque">Meu 5° PROJETO</span> foi o BitPrice, uma plataforma que checa os atuais preços das criptomoedas em API's de diversas corretoras.
                 </br><span class="destaque">Meu 6° PROJETO</span> foi o Renthon Pizzaiolo, um sistema completo de Pizzaria em React, simulando a criação dos produtos, os pedidos na cozinha, e o aplicativo do garçom no celular.
                 </br><span class="destaque">Meu 7° PROJETO</span> foi esse Cartão de Visitas, portfolio que fiz com os cursos da Alura, fornecidos pelo Programa ONE - Oracle Next Education.
-            </p>
+
+                -->
+            </div>
         </section>
         <img class="containerImg" src="assets/profile-pic.png" alt="Foto-do-Heitor">
     </main>
@@ -66,17 +83,15 @@
             $('#home').html('ホーム');
             $('#about').html('私について');
             $('#containerSectionH1').html('<strong class="destaque">私</strong>について！');
-            $('#containerSectionP').html(`こんにちは、私の名前はエイトル・ドゥトラ・ベントです。 私は 18 歳で、<span class="destaque">フルスタック開発者</span>です 。 私は現在、エスタシオ大学で遠隔教育におけるシステム分析と開発を学んでいます。<span class="destaque"> ポルトガル語と英語にペラペラで、日本語は中級です。</span>.
-            この分野での私の旅は、2020 年の隔離期間中に 2018 年の Web 開発ク授業を完全に受講したときに始まりました。
-                2021 年に WordPress を発見し、WordPress で Web サイトを作成する練習を始めました。以下のプロジェクトの詳細を確認するには、<a href="#" class="destaque">ここをクリックしてください。</a>
-                </br><span class="destaque">私の最初のプロジェクト</span>は、母のビジネスのための機関ウェブサイトでした。 
-                2021 年になっても、グラフィック タブレットを受け取り、次のプロジェクトのデザインを作成したり、実際に絵を描いたりするために使用しました。
-                </br><span class="destaque">私の２つ目プロジェクト</span>は私のプロジェクトポートフォリオでした。
-                </br><span class="destaque">私の３つ目プロジェクト</span> は、WordPress 以外でプログラムされた Web サイトに戻りましたが、ThonThon でした。 2020 コースの基本的な「Twitter クローン」プロジェクトを応用したものですが、さらに多くの機能が追加されています。
-                </br><span class="destaque">私の４つ目プロジェクト</span> は VavaLineups で、ゲーム Valorant のキャラクター Viper の動きを示すことに焦点を当てていました。その中で、プラットフォーム上に VIP アカウントを作成するための支払い方法を実装したいと考えました。
-                </br><span class="destaque">私の５つ目プロジェクト</span> は、さまざまなブローカーの API で仮想通貨の現在の価格をチェックするプラットフォームである BitPrice でした。
-                </br><span class="destaque">私の６つ目プロジェクト</span>は、React で作られた完全なピッツェリア システムである Renthon Pizzaiolo で、製品の作成、キッチンでの注文、携帯電話でのウェイターのアプリケーションをシミュレートしました。
-                </br><span class="destaque">私の７つ目プロジェクト</span>は、このビジネスカードで、ONEプログラムであるOracle Next Educationが提供するAluraの学校で作成したポートフォリオです。`);
+            $('#containerSectionP').html(`
+            
+                <p>こんにちは、私の名前はエイトル・ドゥトラ・ベントです。 私は <span id="idade"></span> 歳で、<span class="destaque">フルスタック開発者</span>です 。現在、Estácio大学で EAD モダリティのシステム分析と開発を学んでいます。<span class="destaque"> ポルトガル語と英語にペラペラで、日本語は中級です。</span>以下は私の学習の概要ですが、私が学んだことをすべて詳しく確認したい場合は、<a href="https://heitordutra.site/portfolio/#certificados" class="destaque">ここをクリックしてください</a>！</p>
+
+                <p>この分野での私の旅は、2020 年の隔離中に Udemy で<a href="https://www.udemy.com/certificate/UC-e5fc21ac-3784-4917-92fa-165d0777eae5/" class="destaque">フル Web 開発コース 2018</a> を修了したときに始まりました。そこでは、HTML5、JavaScript、CSS3、PHP、MYSQL、JQuery について学びました。2021 年には WordPress を知り、それを使って Web サイトを作成する練習を始めました。2022 年には、以前の 2020 年のコースで学んだことを活かして、WordPress を使ったプロジェクトの作成と他のプログラミングに重点を置きました。 2023年にEstácioで<span class="destaque">ソフトウェアエンジニアリングの勉強を始めましたが、2学期目にシステム分析と開発</span>にコースを変更しました。2023年末までに、Udemyで<a href="https://www.udemy.com/certificate/UC-f5ca3be6-38f9-479d-a248-279e4223003f/" class="destaque">「NodeJS、React、React Native、TypeScriptを使用した完全なプロジェクト」コース</a>も受講しました。2024年の第1学期には、システム分析と開発のコースに、クラウドコンピューティング、アプリケーション間の通信、ソフトウェアエンジニアリング、UMLでのシステムモデリングなどについて学びました。また、3月にはAluraとOracleのプログラム「Programa ONE - Oracle Next Education」にも参加しました。</p>
+
+                <p>2020年から今日までに作ったすべてのプロジェクトと取得したすべての認定の詳細については、<a href="https://heitordutra.site/portfolio/#certificados" class="destaque">ここをクリックしてください。</a><p/>
+
+                `);
             $('#footerP').html('Heitor D.B. (Renthon) - 34studio によって開発されました。');
 
         }
@@ -89,17 +104,14 @@
             $('#home').html('Home');
             $('#about').html('About Me');
             $('#containerSectionH1').html('About <strong class="destaque">Me!</strong>');
-            $('#containerSectionP').html(`Hey! I'm Heitor Dutra Bento. I'm a 18 years old <span class="destaque">Full-Stack Developer</span>. Currently studying Systems Analysis and Development in EAD Modality at the University of Estácio. I'm fluent in <span class="destaque">Portuguese and English, and intermediate in Japanese</span>.
-                My journey on this area begins when I completed the Full Web Development Course 2018 at Udemy during the quarantine back in 2020.
-                In 2021 I got to know WordPress and I started practicing creating websites in it. <a href="#" class="destaque">Click here</a> to check more detailes 'bout these projects:
-                </br><span class="destaque">My 1° PROJECT</span> was an intistucional website for my mom's business.
-                Also in 2021 I received a graphics tablet, that would help me to make some designs to my future projects and to draw too.
-                </br><span class="destaque">My 2° PROJECT</span> was my project's portfolio.
-                </br><span class="destaque">MY 3° PROJECT</span> coming back to programmed websites with no WordPress, was ThonThon. An adaptation from the basic project "Twitter Clone" from the 2020 course, but with a lot more functionalities.
-                </br><span class="destaque">My 4° PROJECT</span> was VavaLineups, and it focused on showing plays and lineups that you can make with Viper in the game of Valorant. In this project I wanted to implement payment methods for creating a VIP account in the platform.
-                </br><span class="destaque">My 5° PROJECT</span> was BitPrice, a platform that checks the current prices of cryptocurrencies on APIs's from various brokers.
-                </br><span class="destaque">My 6° PROJECT</span> was Renthon Pizzaiolo, a complete Pizzaria system made with React, simulating the creation of the products, the kitchen's orders, and the waiter app on his cell phone.
-                </br><span class="destaque">My 7° PROJECT</span> was this Visit Card, a portfolio I made with the Alura courses, provided by the ONE Program - Oracle Next Education.`);
+            $('#containerSectionP').html(`
+            
+                <p>Hey! I'm Heitor Dutra Bento. I'm a <span id="idade"></span> years old <span class="destaque">Full-Stack Developer</span>. Currently studying Systems Analysis and Development in EAD Modality at the University of Estácio. I'm fluent in <span class="destaque">Portuguese and English, and intermediate in Japanese</span>. Here follows a summary of my studies, but if you are interested on checking everything I've learned in details, <a href="https://heitordutra.site/en/portfolio-en/" class="destaque">click here!</a></p>
+
+                <p>My journey on this area begins when I completed the <a href="https://www.udemy.com/certificate/UC-e5fc21ac-3784-4917-92fa-165d0777eae5/" class="destaque">Full Web Development Course 2018</a> at Udemy during the quarantine back in 2020, where I learned about: HTML5, JavaScript, CSS3, PHP, MYSQL and JQuery. In 2021 I got to know WordPress and started practicing creating websites in it. In 2022 I focused on creating some projects with it, and also some others programming, with what I learned with the previous 2020 course. In 2023 I started studying <span class="destaque">Software Engineering at Estácio, but ended up changing the course to Systems Analysis and Development</span> on the second semester. By the end of 2023, I also did the course <a href="https://www.udemy.com/certificate/UC-f5ca3be6-38f9-479d-a248-279e4223003f/" class="destaque">"Complete Project with NodeJS, React, React Native, TypeScript" at Udemy.</a> In the 1° semester of 2024, keeping up with the SAD course, I studied about: Cloud Computing, Communication between Applications, Software Engineering, Systems modeling in UML, etc... And in March I also joined the program <a href="https://cursos.alura.com.br/user/heitordutra" class="destaque">"Programa ONE - Oracle Next Education"</a>, from Alura & Oracle.</p>
+
+                <p><a href="https://heitordutra.site/en/portfolio-en/" class="destaque">Click here</a> to see more details of all the projects that I've done, e all the certifications I got, since 2020 until today!</p>
+                `);
             $('#footerP').html('Developed by Heitor D. B. (Renthon)- 34studio.');
 
         }
